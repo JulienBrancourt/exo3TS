@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 3 TS</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+    <main>
+
+        <section class="contacts">
+            <h2>Contacts</h2>
+            <ul id="affichageContacts"></ul>
+            <button id="addContact">Add</button>
+        </section>
+    
+        <div id="contactModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Add a contact</h3>
+                <form id="contactForm">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required><br>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required><br>
+                    <label for="dateOfBirth">Date of Birth:</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required><br>
+                    <button type="submit">Add Contact</button>
+                </form>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+    
+        <div id="editModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Edit Contact</h3>
+                <form id="editForm">
+                    <label for="editFirstName">First Name:</label>
+                    <input type="text" id="editFirstName" name="firstname" required><br>
+                    <label for="editLastName">Last Name:</label>
+                    <input type="text" id="editLastName" name="lastname" required><br>
+                    <label for="editDateOfBirth">Date of Birth:</label>
+                    <input type="date" id="editDateOfBirth" name="dateOfBirth" required><br>
+                    <label for="editEmail">Email:</label>
+                    <input type="email" id="editEmail" name="email" required><br>
+                    <label for="editPhone">Phone:</label>
+                    <input type="text" id="editPhone" name="phone" required><br>
+                    <button type="submit">Save Changes</button>
+                </form>
+                <button id="closeEditModal">Close</button>
+            </div>
+        </div>
+    
+        <section id="contactDetails" class="details">
+            <h2>Contact Details</h2>
+            <div id="detailsContent"></div> 
+            <div class="zone-button">
+                <button id="editContact">Edit</button>
+                <button id="deleteContact">Delete</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
